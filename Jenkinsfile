@@ -13,12 +13,12 @@ pipeline {
 			steps {
 				script {
 					def list = sh returnStdout: true, script: "ls"
-					def choice_params = []
+					String[] choice_params = []
 					list.split("\n").each { str ->
 						println str.trim()
 						choice_params.add(str.trim())
 					}
-					
+
 					def input_data = input id: '123213213', message: 'dafd', parameters: [
 							booleanParam(defaultValue: false, description: '1234', name: 'ert'),
 							booleanParam(defaultValue: true, description: '2345', name: 'edc'),
