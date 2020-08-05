@@ -16,9 +16,9 @@ pipeline {
 					def choice_params_list = []
 					list.split("\n").each { str ->
 						println str
-						choice_params.add(str.trim().toString())
+						choice_params_list.add(str.trim().toString())
 					}
-					String[] choice_params_array = list.toArray()
+					String[] choice_params_array = choice_params_list.toArray()
 					
 					def input_data = input id: '123213213', message: 'dafd', parameters: [
 							booleanParam(defaultValue: false, description: '1234', name: 'ert'),
