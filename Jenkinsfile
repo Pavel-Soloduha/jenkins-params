@@ -13,7 +13,7 @@ pipeline {
 			steps {
 				script {
 					def list = sh returnStdout: true, script: "ls -l"
-					list.split("\n").forEach { str ->
+					list.split("\n").each { str ->
 						println str
 					}
 					def input_data = input id: '123213213', message: 'dafd', parameters: [
