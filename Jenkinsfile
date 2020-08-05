@@ -12,7 +12,7 @@ pipeline {
 		stage("Input params") {
 			steps {
 				script {
-					def list = sh returnStdout: true, script: "ls -l"
+					def list = sh returnStdout: true, script: "ls"
 					list.split("\n").each { str ->
 						println str
 					}
