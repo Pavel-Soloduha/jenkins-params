@@ -26,7 +26,7 @@ pipeline {
 						]
 
 					input_data.each { key ->
-						println key + " " + input_data[key]
+						println key
 					}
 				}
 			}
