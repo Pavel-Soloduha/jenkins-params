@@ -16,7 +16,7 @@ pipeline {
 					String[] choice_params = []
 					list.split("\n").each { str ->
 						println str.trim()
-						choice_params.add(str.trim())
+						choice_params.add(str.trim().toString())
 					}
 
 					def input_data = input id: '123213213', message: 'dafd', parameters: [
