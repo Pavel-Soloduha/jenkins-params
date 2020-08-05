@@ -15,7 +15,7 @@ pipeline {
 					def list = sh returnStdout: true, script: "ls"
 					String[] choice_params = []
 					list.split("\n").each { str ->
-						println str.trim()
+						println str
 						choice_params.add(str.trim().toString())
 					}
 
